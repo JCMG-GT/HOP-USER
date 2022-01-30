@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Container(
                       width: responsive.width,
-                      height: responsive.altoP(86),
+                      height: responsive.altoP(90),
                       decoration: BoxDecoration(
                         borderRadius: borderRadius,
                       ),

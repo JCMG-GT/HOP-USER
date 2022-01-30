@@ -105,8 +105,8 @@ class _LoginPageState extends State<LoginPage> {
       autofocus: true,
       textCapitalization: TextCapitalization.sentences,
       decoration: InputDecoration(
-        labelText: "User",
-        hintText: "Username/email",
+        labelText: "Email",
+        hintText: "Email",
       ),
       onSaved: (value) => logModel.user = value,
     );
@@ -149,8 +149,6 @@ class _LoginPageState extends State<LoginPage> {
       height: 50.0,
       child: RaisedButton(
         onPressed: () {
-          Navigator.pushNamed(context, "home");
-          return;
           _login();
         },
         shape:
@@ -204,7 +202,7 @@ class _LoginPageState extends State<LoginPage> {
   _login() async {
     if (txtEmail.text.isEmpty) {
       utils.alertValidation(
-          context, AlertType.warning, "HOP", "Enter your username.");
+          context, AlertType.warning, "HOP", "Enter your email.");
 
       return;
     }
